@@ -14,11 +14,34 @@
             <a href="2022Mar22.html"> March 2nd, 2022 </a>
             <a href="2022Mar22.html"> March 3rd, 2022 </a>
         </nav>
-        <h1>Contents</h1>
+        <h1>TIL</h1>
     </header>
     <main>
-        Hello This is Jeeyool's blog
-        I'll record what I learn occasionally.
+        <p>
+        <h2><time datetime="2022-03-02"> March 2, 2022</time></h2>
+        <h3>How to initialize a pointer to nullptr</h3>
+        When a pointer is initialized to 0(or nullptr), it has pointed to null. <br>
+        That means it hasn't allocated any contiguous memory region to store a data set yet.
+        <br>
+        Therefore, don't expect it has an array in it and the value is set to '\0.'
+        <br>
+        <mark>Note: 0 interpreted as nullptr on VS compiler</mark>
+    </p>
+    <p>
+        <code>
+        char* str{};
+        <br>
+        char* str1{0};
+        <br>
+        char* str2(nullptr);
+        <br>
+        char* str3(0);
+        <br>
+        cout << (str==nullptr) << (str1==nullptr) << (str2==nullptr) << str3==nullptr); 
+         <br> cout << (str==0) << (str1==0) << (str2==0) << (str3==0);
+        </code>
+    </p>
+    <p>All of them are True</p>
     </main>
 </body>
 
