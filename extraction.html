@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Home </title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">Home</a></h1>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle">☰</label>
+            <a href="pointer_initialization.html"> Pointer initialization </a>
+            <a href="stringClass.html"> String class </a>
+            <a href="extraction.html"> Extraction </a>
+        </nav>
+        <h1>TIL</h1>
+    </header>
+    <main>
+        <h2><time datetime="2022-03-07"> March 7, 2022</time></h2>
+        <h3>How cin extracts data from input stream</h3>
+        <p>
+        <mark> for integer type</mark> <br>
+        If invalid integer(non-numeric characters) is inputted into the input stream, the state of istream cin turns to <b>fail</b>. <br>
+        Also, if floating point number is inputted, it <b>truncates decimals.</b> <br>
+        </p>
+    <p>
+        <code>
+            int value; <br>
+            cin >> value; <br>
+            if (cin.fail()) cout << "cin failed - invalid value: " << value << endl; <br>
+            else cout << "valid value: " << value << endl; <br>
+        </code>
+    </p>
+    <p><code>cin.fail()</code> can check if user input is valid</p>
+    </main>
+</body>
+
+</html>

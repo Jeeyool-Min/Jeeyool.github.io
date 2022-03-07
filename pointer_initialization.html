@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title> Home </title>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/kimeiga/bahunya/css/bahunya-0.1.3.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1><a href="index.html">Home</a></h1>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle">☰</label>
+            <a href="pointer_initialization.html"> Pointer initialization </a>
+            <a href="stringClass.html"> String class </a>
+            <a href="extraction.html"> Extraction </a>
+        </nav>
+        <h1>TIL</h1>
+    </header>
+    <main>
+        <p>
+        <h2><time datetime="2022-03-02"> March 2, 2022</time></h2>
+        <h3>How to initialize a pointer to nullptr</h3>
+        When a pointer is initialized to 0(or nullptr), it has pointed to null. <br>
+        That means it hasn't allocated any contiguous memory region to store a data set yet.
+        <br>
+        Therefore, don't expect it has an array in it and the value is set to '\0.'
+        <br>
+        <mark>Note: 0 interpreted as nullptr on VS compiler</mark>
+    </p>
+    <p>
+        <code>
+        char* str{};
+        <br>
+        char* str1{0};
+        <br>
+        char* str2(nullptr);
+        <br>
+        char* str3(0);
+        <br>
+        cout << (str==nullptr) << (str1==nullptr) << (str2==nullptr) << str3==nullptr); 
+         <br> cout << (str==0) << (str1==0) << (str2==0) << (str3==0);
+        </code>
+    </p>
+    <p>All of them are True</p>
+    </main>
+</body>
+
+</html>
